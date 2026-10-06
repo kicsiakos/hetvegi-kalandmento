@@ -1,0 +1,53 @@
+#hetvegi-kalandmento--root {
+  max-width: 100vw;
+  .events-container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    column-gap: 2vw;
+    row-gap: 2vw;
+    justify-content: center;
+    align-items: center;
+    .event-item {
+      padding: 20px;
+      width: 55%;
+      border: 1px solid rgb(214, 205, 205);
+      border-radius: 40px;
+      display: flex;
+      flex-direction: row;
+      background-color: #ccffec;
+      .image-placeholder {
+        width: 40%;
+        background-color: gray;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        margin-right: 40px;
+      }
+      .event-content {
+        .title {
+          font-size: 30px;
+          font-weight: 500;
+        }
+        button {
+          border: 1px solid rgb(197, 228, 25);
+          border-radius: 20px;
+          width: 100%;
+          height: 50px;
+          background-color: rgb(221, 191, 136);
+          cursor: pointer;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1150px) {
+    .image-placeholder {
+        display: none !important;
+    }
+}

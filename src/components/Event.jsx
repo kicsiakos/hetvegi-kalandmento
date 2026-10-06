@@ -1,3 +1,5 @@
+import "./Event.scss";
+
 function formatDate(isoString) {
   if (!isoString) return "";
 
@@ -13,6 +15,14 @@ function formatDate(isoString) {
   }).format(date);
 }
 
+const statusColors = {
+  available: "#28a745",
+  few_left: "#ffc107",
+  full: "#dc3545",
+  cancelled: "#6c757d",
+  past: "#6c757d",
+};
+
 export default function Event({
   title,
   location,
@@ -20,16 +30,40 @@ export default function Event({
   difficulty,
   price,
   status,
+  bookable,
+  status_key,
 }) {
   return (
     <div className="event-item">
-      <img src="" alt="" />
-      <h3 className="title">{title}</h3>
-      <p className="location">{location}</p>
-      <p className="start_at">{formatDate(start_at)}</p>
-      <p className="difficulty">{difficulty}</p>
-      <p className="status">{status}</p>
-      <p className="price">{price}</p>
+      <div className="image-placeholder">Placeholder image.</div>
+      <div className="event-content">
+        <h3 className="title">{title}</h3>
+        <p className="location">{location}</p>
+        <p className="start_at">{formatDate(start_at)}</p>
+        <p className="difficulty">{difficulty}</p>
+        <p
+          className="status"
+          style={{
+            backgroundColor: statusColors[status_key],
+            border: "1px solid black",
+            borderRadius: "20px",
+            padding: "5px 10px",
+            textAlign: "center",
+          }}
+        >
+          {status}
+        </p>
+        <p className="price">{price > 0 ? `${price} HUF` : "Ingyenes"} </p>
+        <button
+          style={
+            !bookable
+              ? { cursor: "not-allowed", backgroundColor: "gray" }
+              : null
+          }
+        >
+          Jelentkezem
+        </button>
+      </div>
     </div>
   );
 }
