@@ -1,16 +1,40 @@
-# React + Vite
+Telepítési útmutató:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- Töltse le a .zip filet a teljes forráskódról
+- WP Admin felületen 'Add plugin'
+- Nyissa meg a .zip filet és telepitse fel
+- Készitsen egy új oldalt és adjon hozzá egy 'Shortcode' blokkot
+- A shortkód blokkban adja meg a következő szöveget -> [hetvegi_kalandmento]
 
-Currently, two official plugins are available:
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Fejlesztési idő hozzávetőlegesen : 3 ó 15p dependency telepitésekkel és szünetekkel együtt.
 
-## React Compiler
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Ismert hiányosságok: 
 
-## Expanding the ESLint configuration
+- Mobil nézet nem végleges
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Meghozott technikai döntések:
+
+- React + Vite alapú frontend a gyors és hatékony renderelésekért és az esetleges extra NPM könyvtárak kihasználásáért. State management az oldal újratöltése nélküli UI frissitésért. 
+
+- PHP oldalon a nyers adat átdolgozása és továbbitása REST API endpointon keresztül.
+
+- Prioritás elsősorban a leírásban megadott funkciók voltak majd azt követően egy alap UI megteremtése, azt követően töréspontok átnézése mobilnézetre.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Több idő esetén egy modernebb kifinomultabb UI fejlesztése és a mobil / tablet nézet teljes lefejlesztése. 
+Képek gyűjtése a placeholder képek helyettesítésére.
+További szűrési illetve rendezési funkciók hozzáadása.
+Gombok Onlick eseményének kidolgozása.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+AI eszközök: 
+
+Minimális sima ingyenes Gemini használat (4-5 kérdés) az esetlegesen eszembe nem jutó wordpress vagy egyéb syntaxissal kapcsolatos gyors válaszokra, hogy ne kelljen a Wordpress dokumentációban kóborolni. 
