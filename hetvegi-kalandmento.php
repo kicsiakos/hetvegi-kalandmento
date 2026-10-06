@@ -11,6 +11,10 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
+define('HKM_PLUGIN_DIR', plugin_dir_path(__FILE__));
+
+include_once HKM_PLUGIN_DIR . 'includes/rest-routes.php';
+
 function hetvegi_kalandmento_enqueue_assets()
 {
     $js_file  = plugin_dir_url(__FILE__) . 'dist/assets/index.js';
